@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kurzy VSB - Kontakt</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/script.js" defer></script>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>Kurzy VŠB</h1>
+            <img src="images/znak01.gif" alt="">        
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">Úvod</a></li>
+                <li><a href="kurzy.html">Kurzy</a></li>
+                <li><a href="vstupne.html">Vstupné</a></li>
+                <li><a href="kontakt.html">Kontakt</a></li>          
+            </ul>
+        </nav>
+    </header>
+
+    <section class="vstupne">            
+        <form name="vstupneForm">
+            <fieldset>
+                <legend>Vstupné</legend>
+                <div class="formRow">
+                    <label for="pocet">Pocet osob:</label>
+                    <input type="number" name="pocet" id="pocet" min="1" value="1" max="100">
+                </div>
+                <div class="formRow">
+                    <label>Cas navstevy:</label>
+                    <fieldset class="optGroup">
+                        <input type="radio" name="sezona" id="sezona" value="100">
+                        <label for="sezona">Sezona</label>
+                        <input type="radio" name="sezona" id="mimosezona" value="50">
+                        <label for="mimosezona">Mimo sezonu</label>
+                    </fieldset>
+                </div>
+                <div class="formRow">
+                    <label>Navstivit objekty:</label>
+                    <fieldset class="optGroup">
+                        <div>
+                            <label for="fakulta1">Fakulta 1</label>
+                            <input type="checkbox" name="fakulta1" id="fakulta1">
+                            <label for="fakulta2">Fakulta 2</label>
+                            <input type="checkbox" name="fakulta2" id="fakulta2">
+                        </div>
+                        <div>
+                            <label for="fakulta3">Fakulta 3</label>
+                            <input type="checkbox" name="fakulta3" id="fakulta3">
+                            <label for="fakulta4">Fakulta 4</label>
+                            <input type="checkbox" name="fakulta4" id="fakulta4">
+                        </div>                    
+                    </fieldset>
+                </div>
+                <div class="formRow">
+                    <h3 class="vysledna-cena">Vysledna cena: <span class="cena"></span></h3>
+                </div>
+                <div class="formRow">
+                    <button onclick="event.preventDefault(); spocitej()">Spocitej</button>
+                </div>
+            </fieldset>
+        </form>
+        <p>* Pro 4 a více osob sleva 30% (z celkové částky). Vstup mimo sezónu je poloviční. Normální vstupné na každou fakultu je 100 Kč.</p>
+    </section>
+    <footer>
+        <p>&copy; 2021 - design by Martin Kohoutek</p>
+    </footer>
+</body>
+</html>
